@@ -85,8 +85,14 @@ fn no() {
 fn main() {
     input! {
         n: usize,
+        t: [u32; n],
     }
 
-    dbg!(n);
-    println!("{n}");
+    let mut sort_t = Vec::new();
+    for i in 1..=n {
+        sort_t.push((t[i - 1], i));
+    }
+    sort_t.sort();
+
+    println!("{} {} {}", sort_t[0].1, sort_t[1].1, sort_t[2].1);
 }
