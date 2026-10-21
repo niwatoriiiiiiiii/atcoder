@@ -83,3 +83,31 @@ smallvec = { version = "=1.15.1", features = ["const_generics", "const_new", "wr
 [[bin]]
 name = "template"
 path = "template.rs"
+
+[[bin]]
+name = "abc480-a"
+path = "abc480/a.rs"
+
+[[bin]]
+name = "abc480-b"
+path = "abc480/b.rs"
+
+[[bin]]
+name = "abc480-c"
+path = "abc480/c.rs"
+
+[[bin]]
+name = "abc480-d"
+path = "abc480/d.rs"
+
+[[bin]]
+name = "abc480-e"
+path = "abc480/e.rs"
+
+[[bin]]
+name = "abc480-f"
+path = "abc480/f.rs"
+
+[[bin]]
+name = "abc480-g"
+path = "abc480/g.rs"
