@@ -80,6 +80,9 @@ text_io = "=0.1.13"
 rustc-hash = "=2.1.1"
 smallvec = { version = "=1.15.1", features = ["const_generics", "const_new", "write", "union", "serde", "arbitrary"] }
 
+[lints.clippy]
+if_same_then_else = "allow"
+
 [[bin]]
 name = "template"
 path = "template.rs"
