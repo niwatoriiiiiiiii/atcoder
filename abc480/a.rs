@@ -84,21 +84,12 @@ fn no() {
 #[fastout]
 fn main() {
     input! {
-        s1: String,
-        s2: String,
+        grid: [Bytes; 2],
     }
 
-    let s = s1 + &s2;
-
-    #[allow(clippy::iter_nth_zero)]
-    #[allow(clippy::if_same_then_else)]
-    if s.chars().nth(0) == Some('A') && s.chars().nth(3) == Some('D') {
+    if grid[0][0] == b'A' && grid[1][1] == b'D' || grid[0][0] == b'D' && grid[1][1] == b'A' {
         no();
-    } else if s.chars().nth(1) == Some('A') && s.chars().nth(2) == Some('D') {
-        no();
-    } else if s.chars().nth(2) == Some('A') && s.chars().nth(1) == Some('D') {
-        no();
-    } else if s.chars().nth(3) == Some('A') && s.chars().nth(0) == Some('D') {
+    } else if grid[1][0] == b'A' && grid[0][1] == b'D' || grid[1][0] == b'D' && grid[0][1] == b'A' {
         no();
     } else {
         yes();
